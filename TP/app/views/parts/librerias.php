@@ -5,5 +5,5 @@
     <title>Tienda Libros</title>
 
     <!-- Mi CSS -->
-    <link rel="stylesheet" href="../../../../TP/app/resources/index.css">
+    <link rel="stylesheet" href="../../../../PHP-ECommerce/TP/app/resources/index.css">
 </head>
