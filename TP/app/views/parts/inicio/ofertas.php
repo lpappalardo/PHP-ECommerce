@@ -21,12 +21,14 @@
                 </div>
                 <div class="card-body">
                     <h3 class="card-body-title"><?php echo $producto->nombre; ?></h3>
-                    <p class="card-body-price-tachado"><?php echo '$' .  $producto->precio; ?></p>
                     <?php 
                         $descuentoPrecio = $producto->precio * $producto->porcentajeDescuento;
                         $precioFinal = $producto->precio - $descuentoPrecio; 
                     ?>
-                    <p class="card-body-price"><?php echo '$' . $precioFinal; ?></p>
+                    <div class="row">
+                        <p class="card-body-price"><?php echo '$' . $precioFinal; ?></p>
+                        <p class="card-body-price-tachado"><?php echo '$' .  $producto->precio; ?></p>
+                    </div>
                     <div class="card-body-buttons">
                         <button class="card-body-button button-principal">Añadir a carrito</button>
                         <button class="card-body-button button-secundario" onclick="window.location.href='detalle.php?product_id=<?php echo $producto->id ?>'">Ver más</button>

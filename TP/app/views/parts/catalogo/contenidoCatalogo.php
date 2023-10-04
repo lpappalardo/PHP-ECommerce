@@ -40,9 +40,15 @@
             ?>
             </ul>
         </div>
+
+        <?php
+        if(count($miCatalogo) < 1){
+                    echo "<h2 class='aviso centrar'>Lo sentimos, en este momento no hay productos en el género seleccionado</h2>";
+                } else {
+        ?>
         <div class="cards">
             <?php 
-                foreach( $miCatalogo as $producto){;
+                    foreach( $miCatalogo as $producto){;
             ?>
                 <div class="card">
                     <div class="card-img centrar">
@@ -77,6 +83,7 @@
                 </div>
             <?php
                 };
+            };
             ?>
         </div>
     </div>

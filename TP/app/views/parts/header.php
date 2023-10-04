@@ -1,6 +1,6 @@
 <header class="fondoPrincipal">
     <div class="encabezadoWeb container">
-        <h1 class="centrar">Libros</h1>
+        <h1 class="centrar">Tienda Libros</h1>
         <nav class="navegacion">
             <ul>
                 <li class="nav-item centrar"><a class="nav-link" href="../../../../../PHP-ECommerce/TP/app/views/home.php" >inicio</a></li>
