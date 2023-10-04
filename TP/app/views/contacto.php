@@ -6,11 +6,12 @@
 <body>
     <?php
         include '../views/parts/header.php';
+        include '../views/parts/contacto/formulario.php';
     ?>
 
-    <div class="container">
+    <!-- <div class="container">
         <p>contacto</p>
-    </div>
+    </div> -->
 
     <?php
         include "../views/parts/footer.php";

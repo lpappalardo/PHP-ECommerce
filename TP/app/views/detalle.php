@@ -5,11 +5,12 @@
     ?>
 <body>
     <?php
-        include '../../TP/app/views/parts/header.php';
+        include '../views/parts/header.php';
+        include '../views/parts/detalle/contenidoProducto.php';
     ?>
 
     <?php
-        include "../../TP/app/views/parts/footer.php";
+        include "../views/parts/footer.php";
     ?>
 </body>
 </html>

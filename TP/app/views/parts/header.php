@@ -8,7 +8,10 @@
                 <li class="nav-item centrar"><a class="nav-link" href="../../../../PHP-ECommerce/TP/app/views/contacto.php">contacto</a></li>
             </ul>
             <ul class="nav-secundaria">
-                <li class="nav-item centrar">carrito</li>
+                <li class="nav-item centrar carrito">
+                    <img src="../../../../../PHP-ECommerce/TP/app/resources/img/icons/cart.png" alt="Carrito">
+                    <span class="carrito-cantidad">0</span>
+                </li>
             </ul>
         </nav>
     </div>

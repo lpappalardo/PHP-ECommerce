@@ -4,9 +4,9 @@
             <h2 class="centrar">Libros</h2>
             <nav class="navegacion centrar">
                 <ul>
-                    <li class="nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/facebook.png" alt="Facebook"></a></li>
-                    <li class="nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/instagram.png" alt="Instagram"></a></li>
-                    <li class="nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/twitter.png" alt="Twitter"></a></li>
+                    <li class="footer-item nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/facebook.png" alt="Facebook"></a></li>
+                    <li class="footer-item nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/instagram.png" alt="Instagram"></a></li>
+                    <li class="footer-item nav-item centrar"><a><img src="../../../../PHP-ECommerce/TP/app/resources/img/icons/twitter.png" alt="Twitter"></a></li>
                 </ul>
             </nav>
         </div>

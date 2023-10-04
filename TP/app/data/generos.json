@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Todos"
+    },
+    {
+        "id": 2,
+        "nombre": "ciencia ficcion"
+    },
+    {
+        "id": 3,
+        "nombre": "fantasia"
+    },
+    {
+        "id": 4,
+        "nombre": "historia"
+    },
+    {
+        "id": 5,
+        "nombre": "misterio"
+    },
+    {
+        "id": 6,
+        "nombre": "romance"
+    },
+    {
+        "id": 7,
+        "nombre": "terror"
+    }
+]

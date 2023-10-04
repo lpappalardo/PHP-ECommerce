@@ -6,6 +6,7 @@ class Productos{
     public $precio;
     public $descripcion;
     public $genero;
+    public $generoId;
     public $cantidadDePaginas;
     public $autor;
     public $tieneDescuento;
@@ -18,6 +19,7 @@ class Productos{
     public $sagaNumero;
 
     public function  traerCatalogo() {
+
         $json = file_get_contents("../data/productos.json");
         $jsonData = json_decode($json);
 
@@ -30,6 +32,7 @@ class Productos{
             $producto->precio = $value->precio;
             $producto->descripcion = $value->descripcion;
             $producto->genero = $value->genero;
+            $producto->generoId = $value->generoId;
             $producto->cantidadDePaginas = $value->cantidadDePaginas;
             $producto->autor = $value->autor;
             $producto->tieneDescuento = $value->tieneDescuento;
@@ -47,10 +50,74 @@ class Productos{
         return $catalogo;
     }
 
+    public function  traerOfertas() {
+
+        $json = file_get_contents("../data/productos.json");
+        $jsonData = json_decode($json);
+
+        $ofertas = [];
+
+        foreach ($jsonData as $value) {
+            if($value->tieneDescuento){
+                $producto = new self();
+                $producto->id = $value->id;
+                $producto->nombre = $value->nombre;
+                $producto->precio = $value->precio;
+                $producto->descripcion = $value->descripcion;
+                $producto->genero = $value->genero;
+                $producto->cantidadDePaginas = $value->cantidadDePaginas;
+                $producto->autor = $value->autor;
+                $producto->tieneDescuento = $value->tieneDescuento;
+                $producto->porcentajeDescuento = $value->porcentajeDescuento;
+                $producto->imagen = $value->imagen;
+                $producto->stock = $value->stock;
+                $producto->isbn = $value->isbn;
+                $producto->formato = $value->formato;
+                $producto->saga = $value->saga;
+                $producto->sagaNumero = $value->sagaNumero;
+
+                $ofertas[] = $producto;
+            }
+        }
+
+        return $ofertas;
+    } 
+
+    public function detalleDeProducto($idProducto) {
+        $json = file_get_contents("../data/productos.json");
+        $jsonData = json_decode($json);
+
+        $productoElegido = [];
+
+        foreach ($jsonData as $value) {
+            if($value->id == $idProducto){
+                $producto = new self();
+                $producto->id = $value->id;
+                $producto->nombre = $value->nombre;
+                $producto->precio = $value->precio;
+                $producto->descripcion = $value->descripcion;
+                $producto->genero = $value->genero;
+                $producto->generoId = $value->generoId;
+                $producto->cantidadDePaginas = $value->cantidadDePaginas;
+                $producto->autor = $value->autor;
+                $producto->tieneDescuento = $value->tieneDescuento;
+                $producto->porcentajeDescuento = $value->porcentajeDescuento;
+                $producto->imagen = $value->imagen;
+                $producto->stock = $value->stock;
+                $producto->isbn = $value->isbn;
+                $producto->formato = $value->formato;
+                $producto->saga = $value->saga;
+                $producto->sagaNumero = $value->sagaNumero;
+
+                $productoElegido[] = $producto;
+            }
+        }
+
+        return $productoElegido[0];
+    }
 }
 
 //metodos
-//public function detalleDeProducto(){};
 //public function filtroPorTema(etiquetas){}
 //public function favoritos(){}
 //public function comprar(){}

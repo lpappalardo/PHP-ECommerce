@@ -9,7 +9,7 @@
     ?>
 
     <?php
-        include '../views/parts/contenidoCatalogo.php';
+        include '../views/parts/catalogo/contenidoCatalogo.php';
     ?>
 
     <?php
