@@ -22,7 +22,7 @@
                 <label for="mensaje">Mensaje:*</label>
                 <textarea name="mensaje" id="mensaje" placeholder="Mensaje..." required></textarea>
             </div>
-            <button id="enviar" type="submit" name="submit">Enviar</button>
+            <button class="enviar" type="submit" name="submit">Enviar</button>
         </form>
     </div>
 </section>

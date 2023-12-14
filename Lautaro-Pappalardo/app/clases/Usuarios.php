@@ -1,31 +1,66 @@
 <?php
+require_once 'Conexion.php';
+
 class Usuarios {
  public $id;
  public $nombre;
  public $apellido;
  public $email;
- public $contrasena;
- public $domicilio;
- public $tarjeta;
  public $telefono;
+ public $direccion;
 
 //metodo
+public function traer_usuarios(): array {
+    $conexion = new Conexion(); 
+    $db = $conexion->getConexion(); 
+   
+    $query = "SELECT * FROM usuarios"; 
+    $stmt = $db->prepare($query);
+    $stmt->execute(); 
 
-//public ingresar(){}
-//public crearUsuario(){}
-//public cerrarSesion(){}
-//public recuperarContrasena(){}
-//public agregarDatos(){}
-//public favoritos(){}
-//public carrito(){
-    //traer el prodcuto que el cliente clickeó get}
-//public carrito_agregar(){push / put}
-//public carrito_editar(){put}
-//public carrito_vaciar(){delete}
-//public finalizarCompra(){}
-//function Recomendados(){}
+    $usuarios = [];
 
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+       $usuario = new self();
+       $usuario->id = $row['id'];
+       $usuario->nombre = $row['nombre'];
+       $usuario->apellido = $row['apellido'];
+       $usuario->email = $row['email'];
+       $usuario->telefono = $row['telefono'];
+       $usuario->direccion = $row['direccion']; 
+       $usuarios[] = $usuario;
+    }
 
+    return $usuarios;
+ }
+
+ public function agregarUsuario($nombre, $apellido, $email, $direccion, $telefono){
+
+   $conexion = new Conexion();  
+   $db = $conexion->getConexion();
+
+   // Preparar la consulta INSERT
+   $sql = "INSERT INTO usuarios (nombre, apellido, email, telefono, direccion) VALUES (:nombre, :apellido, :email, :telefono, :direccion)";
+
+   // Preparar la sentencia
+   $stmt = $db->prepare($sql);
+
+   // Asociar los valores de los parámetros
+   $stmt->bindValue(':nombre', $nombre);
+   $stmt->bindValue(':apellido', $apellido);
+   $stmt->bindValue(':direccion', $direccion);
+   $stmt->bindValue(':telefono', $telefono);
+   $stmt->bindValue(':email', $email);
+
+   // Ejecutar la consulta
+   if ($stmt->execute() ) {
+     // La inserción se realizó correctamente
+     return true;
+   } else {
+     // Ocurrió un error durante la inserción
+     return false;
+   }
+ }
 
 };
 

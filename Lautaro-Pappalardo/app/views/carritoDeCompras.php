@@ -6,8 +6,7 @@
 <body>
     <?php
         include './header.php';
-        include '../views/parts/detalle/contenidoProducto.php';
-        // include '../views/parts/detalle/recomendacionesProducto.php';
+        include './carrito.php'
     ?>
 
     <?php

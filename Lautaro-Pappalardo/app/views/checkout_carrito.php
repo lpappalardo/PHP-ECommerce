@@ -6,11 +6,7 @@
 <body>
     <?php
         include './header.php';
-        include '../views/parts/detalle/contenidoProducto.php';
-        // include '../views/parts/detalle/recomendacionesProducto.php';
-    ?>
-
-    <?php
+        include '../views/parts/carrito/checkout_exitoso.php';
         include "../views/parts/footer.php";
     ?>
 </body>

@@ -5,15 +5,8 @@
     ?>
 <body>
     <?php
-        include './header.php';
-        include '../views/parts/contacto/formulario.php';
-    ?>
-
-    <!-- <div class="container">
-        <p>contacto</p>
-    </div> -->
-
-    <?php
+        include '../views/parts/header.php';
+        include '../views/parts/admin/navegacionAdministrados.php';
         include "../views/parts/footer.php";
     ?>
 </body>
